@@ -28,7 +28,7 @@ if ($conn->connect_error) {
 $email = $conn->real_escape_string($email);
 
 // Perform the SQL query to insert the email into the database
-$sql = "INSERT INTO email_subscribers (email) VALUES ('$email')";
+$sql = "INSERT INTO email_subscribers (Email) VALUES ('$email')";
 
 if ($conn->query($sql) === TRUE) {
     $response = array("status" => "success", "message" => "Email stored successfully");
